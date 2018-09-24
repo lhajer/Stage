@@ -9,3 +9,15 @@
 
 comment1=Comment.create({content:'heyyyyy'})
 comment2=Comment.create({content: Faker::Lorem.sentence })
+
+recipe1=Recipe.create({description: Faker::Lorem.sentence
+                       title: Faker::Food.dish,
+                       direction:Faker::Food.description
+                       prep_time: 30,
+                         })
+
+recipe2=Recipe.create({description: Faker::Lorem.sentence
+                         title: Faker::Food.dish,
+                         direction:Faker::Food.description
+                         prep_time: 20,
+                           })

@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
 
   # GET /recipes
   def index
-    @recipes = recipe.all
+    @recipes = Recipe.all
 
     render json: @recipes
   end
@@ -15,7 +15,7 @@ class RecipesController < ApplicationController
 
   # POST /recipes
   def create
-    @recipe = recipe.new(recipe_params)
+    @recipe = Recipe.new(recipe_params)
 
     if @recipe.save
       render json: @recipe, status: :created, location: @recipe
@@ -41,7 +41,7 @@ class RecipesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recipe
-      @recipe = recipe.find(params[:id])
+      @recipe = Recipe.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

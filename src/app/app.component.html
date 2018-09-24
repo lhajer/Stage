@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+
+<a routerLink="/Auth">auth</a> <br>
+<a routerLink="/recipes">HOME</a> <br>
+<a routerLink="/Recipe/:id">recipe</a> <br>
+<a routerLink="/AddRecipe/:id">add recipe</a> 
+
+
+<ul>
+  <li *ngFor="let comment of comments">{{ comment.content }}</li>
+</ul>
+
+<router-outlet></router-outlet>
+
